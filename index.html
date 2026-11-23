@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!-- Link external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main calculator container -->
+    <div class="calculator">
+        
+        <!-- Top display screen -->
+        <input type="text" id="display" class="display" readonly placeholder="0">
+
+        <!-- Buttons grid -->
+        <div class="buttons">
+            <!-- Row 1: Control and top operator buttons -->
+            <button class="btn btn-clear" onclick="clearDisplay()">C</button>
+            <button class="btn btn-yellow" onclick="deleteLast()">⌫</button>
+            <button class="btn btn-yellow" onclick="appendOperator('/')">÷</button>
+            <button class="btn btn-yellow" onclick="appendOperator('*')">×</button>
+
+            <!-- Row 2 -->
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn btn-yellow" onclick="appendOperator('-')">-</button>
+
+            <!-- Row 3 -->
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn btn-yellow" onclick="appendOperator('+')">+</button>
+
+            <!-- Row 4 -->
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn btn-equal" onclick="calculateResult()">=</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-zero" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendDecimal()">.</button>
+        </div>
+
+    </div>
+
+    <!-- Link JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
